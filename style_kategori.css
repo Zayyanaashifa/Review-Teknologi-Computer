@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.sidebar {
+    width: 250px; /* Ukuran tetap, bisa diubah sesuai kebutuhan */
+    background-color: #007BFF;
+    position: fixed;
+    height: 100%;
+    padding-top: 20px;
+
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a:hover {
+    background-color: #007BFF;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.content {
+    margin-left: 250px; /* Margin tetap sesuai lebar sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .sidebar {
+        left: -250px; /* Memastikan sidebar tersembunyi di luar layar */
+    }
+
+    #menu-toggle:checked + .menu-icon + .sidebar {
+        left: 0; /* Menampilkan sidebar saat toggle diaktifkan */
+    }
+
+    #menu-toggle:checked + .menu-icon + .sidebar + .content {
+        margin-left: 250px; /* Mengatur margin konten saat sidebar terbuka */
+    }
+
+    .content {
+        margin-left: 0; /* Konten mengambil seluruh lebar saat sidebar tertutup */
+        width: 100%; /* Pastikan konten menggunakan lebar penuh */
+        padding: 10px; /* Mengurangi padding untuk tampilan yang lebih baik */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 200px; /* Ukuran sidebar lebih kecil untuk layar kecil */
+    }
+
+    .content {
+        padding: 10px; /* Padding konten lebih kecil untuk menyesuaikan ruang */
+    }
+
+    .sidebar h2 {
+        font-size: 1.5em; /* Mengurangi ukuran font untuk judul */
+    }
+
+    .sidebar ul li {
+        padding: 8px; /* Padding yang lebih kecil */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Mengurangi ukuran font untuk judul utama */
+    }
+}
+/* Mengatur gaya untuk tabel */
+table {
+    width: 100%; /* Membuat tabel mengambil seluruh lebar kontainer */
+    margin: 20px 0; /* Memberikan margin di atas dan bawah tabel */
+    border-collapse: collapse; /* Menghilangkan jarak antara border sel */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left; /* Menyusun teks di kiri */
+    border: 1px solid #ddd; /* Memberikan border pada tabel */
+}
+
+/* Membuat tabel lebih responsif dan tidak mepet ke kanan */
+table th, table td {
+    word-wrap: break-word; /* Memastikan teks panjang dipecah ke baris baru */
+}
+
+.container {
+    width: 90%; /* Membuat kontainer lebih sempit untuk tampilan yang lebih baik */
+    margin: 0 auto; /* Menempatkan kontainer di tengah halaman */
+}
+
+/* Aturan untuk kolom gambar agar tidak terlalu besar */
+td img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Aturan untuk tombol dan form agar lebih rapi */
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #616060;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Sidebar style */
+.sidebar {
+    width: 200px;
+    float: left;
+}
+
+.content {
+    margin-left: 220px; /* Memberikan ruang agar konten tidak bertumpukan dengan sidebar */
+}
